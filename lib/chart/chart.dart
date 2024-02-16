@@ -29,8 +29,8 @@ class Chart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16),
-      padding: EdgeInsets.symmetric(vertical: 16,horizontal: 8),
+      margin: const EdgeInsets.all(16),
+      padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
       width: double.infinity,
       height: 175,
       decoration: BoxDecoration(
@@ -54,12 +54,12 @@ class Chart extends StatelessWidget {
                 ],
               )
           ),
-          SizedBox(height: 12,),
+          const SizedBox(height: 12,),
           Row(
             children: buckets.map((e) =>
                 Expanded(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 4),
+                      padding: const EdgeInsets.symmetric(horizontal: 4),
                       child: Icon(categoryIcon[e.category]),
                     ),
                 )).toList(),

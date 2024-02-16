@@ -35,7 +35,7 @@ class _NewExpenseState extends State<NewExpense> {
                 controller: _titleController,
                 maxLength: 50,
                 keyboardType: TextInputType.name,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     label: Text(
                         'Title'
                     )
@@ -48,7 +48,7 @@ class _NewExpenseState extends State<NewExpense> {
                       controller: _amountController,
                       maxLength: 50,
                       keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         label: Text(
                             'Amount'
                         ),
@@ -56,7 +56,7 @@ class _NewExpenseState extends State<NewExpense> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 16,),
+                  const SizedBox(width: 16,),
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -76,7 +76,7 @@ class _NewExpenseState extends State<NewExpense> {
                              _selectedDate=pickerDate;
                            });
                         },
-                          icon: Icon(Icons.calendar_month),
+                          icon: const Icon(Icons.calendar_month),
                         )
                       ],
                     ),
@@ -106,7 +106,7 @@ class _NewExpenseState extends State<NewExpense> {
                   const Spacer(),
                   TextButton(
                     onPressed: (){Navigator.pop(context);},
-                    child: Text('Cancel'),
+                    child: const Text('Cancel'),
                   ),
                   ElevatedButton(
                       onPressed: (){
@@ -114,10 +114,10 @@ class _NewExpenseState extends State<NewExpense> {
                         final bool amountIsInvalid = enteredAmount == null || enteredAmount <=0;
                         if(_titleController.text.trim().isEmpty||amountIsInvalid||_selectedDate==null){
                           showDialog(context: context, builder: (ctx)=>AlertDialog(
-                            title: Text('Error'),
-                            content: Text('Invalid Inputs'),
+                            title: const Text('Error'),
+                            content: const Text('Invalid Inputs'),
                             actions: [
-                              TextButton(onPressed: (){Navigator.pop(ctx);}, child: Text('ok'))
+                              TextButton(onPressed: (){Navigator.pop(ctx);}, child: const Text('ok'))
                             ],
                           ));
                         }
@@ -134,7 +134,7 @@ class _NewExpenseState extends State<NewExpense> {
                         }
 
                       },
-                      child: Text('Saved Expense'),
+                      child: const Text('Saved Expense'),
                   )
                 ],
               )

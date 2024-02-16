@@ -15,14 +15,13 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData().copyWith(
-        useMaterial3: true,
-        appBarTheme: AppBarTheme().copyWith(
+        appBarTheme: const AppBarTheme().copyWith(
           backgroundColor: Colors.teal,
           foregroundColor: Colors.white70
         ),
-        cardTheme: CardTheme().copyWith(
+        cardTheme: const CardTheme().copyWith(
           color: Colors.lightBlueAccent,
-          margin: EdgeInsets.symmetric(vertical: 16,horizontal: 8)
+          margin: const EdgeInsets.symmetric(vertical: 16,horizontal: 8)
         )
       ),
       home: const Expenses(),

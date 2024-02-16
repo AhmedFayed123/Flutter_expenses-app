@@ -29,7 +29,7 @@ class _ExpensesState extends State<Expenses> {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title:Text('Expenses Tracker App') ,
+        title:const Text('Expenses Tracker App') ,
         actions: [
           IconButton(
               onPressed: (){
@@ -40,7 +40,7 @@ class _ExpensesState extends State<Expenses> {
                     builder: (c) =>NewExpense(onAddExpense: _addExpense,),
                 );
               },
-              icon: Icon(Icons.add),
+              icon: const Icon(Icons.add),
           )
         ],
       ),

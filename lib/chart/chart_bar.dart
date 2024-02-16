@@ -8,10 +8,10 @@ class ChartBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child:  Padding(
-          padding: EdgeInsets.symmetric(horizontal: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 4),
           child: FractionallySizedBox(
             heightFactor: fill,
-            child: DecoratedBox(
+            child: const DecoratedBox(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(10),
